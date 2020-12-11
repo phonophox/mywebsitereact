@@ -39,9 +39,12 @@ class Art extends React.Component {
 
 
   componentDidMount() {
-    axios
-        .get('http://localhost:8082/api/art')
-        .then(res => {
+    axios({
+        method:"get",
+        url: "http://mern-site.herokuapp.com/api/art",
+
+
+    }).then(res => {
           this.setState({
             art: res.data
           })
@@ -49,7 +52,7 @@ class Art extends React.Component {
         .catch(err =>{
           console.log('Error from ShowBookList');
     })
-
+    console.log(process.env.baseURL);
 
   };
 

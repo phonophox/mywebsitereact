@@ -31,6 +31,19 @@
   --landing-header-width: calc(200px + 15vw + 15vh);
   --landing-header-height: calc(100px + 5vw + 5vh);
 
+
+
+  --tile-height: calc(100vh/12);
+  --tile-width: calc(100vw/24);
+
+  --wood-color: #C19A6B80;
+  --stone-color: #c1c1c180;
+  --fiber-color: #228B2280;
+  --ore-color: #00308F80;
+  --grain-color: #FFD70080;
+  --spice-color: #AF002A80;
+  --happy-color: #b19cd980;
+
 }
 
 #heroText{
@@ -111,6 +124,10 @@ margin-right: 0px;
 background-color: var(--queen-blue);
 border-width: 0px;
 }
+.cardImg{
+max-height: 10vh;
+object-fit: cover;
+}
 .cardText{
 color: var(--space-blue);
 }
@@ -141,6 +158,7 @@ border-radius: 10px;
 padding: 2%;
 
 }
+
 .item{
 border-radius: 10px;
 width: 100%;
@@ -162,7 +180,7 @@ width: 100%;
 height: 100%;
 }
 .logoImage{
-margin-top: 2.5%;
+
 height: 90%;
 width: 100%;
 object-fit: contain;
@@ -186,7 +204,7 @@ font-family: 'Karla', sans-serif;
 margin-bottom: 0px;
 }
 .bootstrapLogo{
-padding: 22px;
+padding: 1vw;
 }
 .artBody{
 min-height: calc(100vh - var(--navbar-height));
@@ -324,4 +342,128 @@ box-shadow: 10px 10px 20px -10px var(--space-blue);
 .contactText{
 width: 100%;
 font-size: calc(15px + .5vw + 1vh);
+}
+.info{
+padding:5px;
+}
+.StayHomeContainer{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+}
+.StayHome{
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  bottom: 0px;
+  position: fixed;
+  z-index: 5000;
+}
+.gameSettings{
+  background-color: white;
+}
+.gameStats{
+  background-color: white;
+}
+.emptyTile{
+  background-color: 	#06427380;
+  background-blend-mode: multiply;
+  background-image: url(https://mk0a2minutetablclg97.kinstacdn.com/wp-content/uploads/2019/04/Ocean-sea-water-tile-texture-map-assets-rough.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.occupiedTile{
+  background-color: white;
+  border: 1px solid black;
+}
+.tile{
+  height: 8.33%;
+  width: 8.33%;
+  margin: 0 !important;
+  float: left;
+}
+.boardArea{
+  height: 100vh;
+}
+.hidden{
+  display: none;
+}
+.currentGameInfo{
+  background-color: white;
+}
+.woodTile{
+  background-color: var(--wood-color);
+}
+.fiberTile{
+  background-color: var(--fiber-color);
+}
+.stoneTile{
+  background-color: var(--stone-color);
+}
+.oreTile{
+  background-color: var(--ore-color);
+}
+.grainTile{
+  background-color: var(--grain-color);
+}
+.spiceTile{
+  background-color: var(--spice-color);
+}
+.happyTile{
+  background-color: var(--happy-color);
+}
+.playerResourceRow{
+  border-top: 1px solid black;
+}
+.noPadding{
+  padding-left: 0;
+  padding-right: 0;
+}
+.noMargin{
+  margin-left: 0;
+  margin-right: 0;
+}
+.playerSttingField{
+  border-top: 1px solid black;
+  padding: 5px;
+}
+.playerName{
+  padding-right: 0px;
+  padding-left: 5px;
+  min-width: 12.5%;
+  max-width: 12.5%;
+}
+
+.playerIcon{
+  height: 33%;
+  width: 33%;
+  float: left;
+}
+.populationIcon{
+  height: 33%;
+  width: 33%;
+  float: right;
+  text-align: center;
+  font-size: 12px;
+  border-width: 0px;
+  background-color: black;
+  color: white;
+}
+.activeIcon{
+  border: 2px solid green;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.actionInputs{
+  background-color: lightgrey;
+}
+.actionInput{
+  width: 20%;
+}
+.actionNumInput{
+  max-width: 80%;
+}
+.invalidAction{
+  background-color: #eb583480;
 }

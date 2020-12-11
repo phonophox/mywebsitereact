@@ -161,40 +161,40 @@ class About extends React.Component {
       this.setState({ isEnter: false }, () => {
       setTimeout(() => {
             if (num==1){
-              this.setState({ text: "test"});
+              this.setState({ text: "A popular JS library that helps make simple component based UI's for applications."});
               this.setState({ header: "React"});
             }
             else if (num==2){
-              this.setState({ text: "test2"});
+              this.setState({ text: "Containerized applications are easy to run on different platforms and are memory light. (in development) "});
               this.setState({ header: "Docker"});
             }
             else if (num==3){
-              this.setState({ text: "test2"});
+              this.setState({ text: "Express provides a simple backend interface to make API calls and set up routes."});
               this.setState({ header: "Express"});
             }
             else if (num==4){
-              this.setState({ text: "test2"});
+              this.setState({ text: "A free cloud hosting business that helps me launch my website and keep it up."});
               this.setState({ header: "Heroku"});
             }
             else if (num==5){
-              this.setState({ text: "test2"});
+              this.setState({ text: "A free JS animation library that helps with cross page fluidity and interactivity on the page."});
               this.setState({ header: "Pose"});
             }
             else if (num==6){
-              this.setState({ text: "test2"});
+              this.setState({ text: "An industry standard JS runtime library that many applications today are built on."});
               this.setState({ header: "Node"});
             }
             else if (num==7){
-              this.setState({ text: "test2"});
+              this.setState({ text: "An add-on for the popular document based databse that introduces schemas. I use this to store my artwork"});
               this.setState({ header: "Mongoose"});
             }
             else if (num==8){
-              this.setState({ text: "test2"});
+              this.setState({ text: "A simple yet powerful responsive UI formatter to ensure a clean look on desktop and mobile views."});
               this.setState({ header: "Bootstrap"});
             }
 
             else {
-              this.setState({ text: "test4"});
+              this.setState({ text: "How did you get here? this is definitely not supposed to happen."});
             }}
         , 300);
         setTimeout(this.toggleText, 400);
@@ -221,14 +221,14 @@ class About extends React.Component {
               </Col>
           </Row>
           <Row className="itemRow">
-                <Col className="itemCol">
-                    <ItemTopLeft className="item itemBottomLeft bootstrapLogo"><Icon className="logoImage" src={bootstrapLogo} onClick={(e) => this.setText(8)}/></ItemTopLeft>
+                <Col xs={3} md={4} className="itemCol">
+                    <ItemTopLeft className="item itemBottomLeft bootstrapLogo sideLogos"><Icon className="logoImage" src={bootstrapLogo} onClick={(e) => this.setText(8)}/></ItemTopLeft>
                 </Col>
-                <Col className="itemCol centerCol">
+                <Col xs={6} md={4} className="itemCol centerCol">
                     <CenterText pose={isEnter ? 'open' : 'closed'} className="text-center"><h3 className= "centerHeader">{this.state.header}</h3><p className="aboutText">{this.state.text}</p></CenterText>
                 </Col>
-                <Col className="itemCol">
-                    <ItemBottomRight className="item itemBottomRight"><Icon className="logoImage" src={herokuLogo} onClick={(e) => this.setText(4)}/></ItemBottomRight>
+                <Col xs={3} md={4} className="itemCol">
+                    <ItemBottomRight className="item itemBottomRight sideLogos"><Icon className="logoImage" src={herokuLogo} onClick={(e) => this.setText(4)}/></ItemBottomRight>
                 </Col>
           </Row>
           <Row className="itemRow">

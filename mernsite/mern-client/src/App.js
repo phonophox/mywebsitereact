@@ -9,6 +9,7 @@ import Art from './components/Art';
 import Contact from './components/Contact';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import StayHome from './components/StayHome';
 
 
 
@@ -29,6 +30,7 @@ const App = () => (
               <Switch location={location}>
                 <Route exact path="/" component={Home} key="home" />
                 <Route path="/about" component={About} key="about" />
+                <Route path="/art" component={Art} key="art" />
                 <Route path="/art" component={Art} key="art" />
               </Switch>
             </RouteContainer>

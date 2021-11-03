@@ -17,7 +17,6 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import CreateArt from './components/CreateArt';
 import Landing from './components/Landing';
-import StayHome from './components/StayHome';
 
 
 const RouteContainer = posed.div({
@@ -28,7 +27,7 @@ const RouteContainer = posed.div({
 const App = () => (
   <Route
     render={({location}) => (
-    <div>
+    <div className= "app">
           <Navbar></Navbar>
 
           <PoseGroup>
@@ -38,8 +37,7 @@ const App = () => (
                 <Route path="/about" component={About} key="about" />
                 <Route path="/art" component={Art} key="art" />
                 <Route path="/contact" component={Contact} key="contact" />
-            	<Route path="/stay-home" component={StayHome} key="stay-home" />
-            	<Route path="/create-art" component={CreateArt} key="create-art" />
+            	  <Route path="/create-art" component={CreateArt} key="create-art" />
                 <Route path="/" component={Landing} key="landing" />
               </Switch>
             </RouteContainer>
@@ -59,4 +57,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
+serviceWorker.unregister();

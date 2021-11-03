@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import '../App.css';
-import Navbar from './Navbar.js'
-import posed, { PoseGroup } from 'react-pose';
+import posed from 'react-pose';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -104,31 +102,31 @@ const ItemBottomLeft = posed.div({
 
 
 
-const AboutCard = posed.div({
-    hoverable: true,
-    pressable: true,
-    press: {
-        scale: .98,
-        boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
-    },
-    hover : {
-        scale: 1.02,
-        boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
-    },
-  open: {
-    scale: 1,
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { type: 'spring', stiffness: 800, damping: 40 },
-      default: { duration: 700 }
-    }
-  },
-  closed: {
-    y: 50,
-    opacity: 0
-  }
-});
+// const AboutCard = posed.div({
+//     hoverable: true,
+//     pressable: true,
+//     press: {
+//         scale: .98,
+//         boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
+//     },
+//     hover : {
+//         scale: 1.02,
+//         boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+//     },
+//   open: {
+//     scale: 1,
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       y: { type: 'spring', stiffness: 800, damping: 40 },
+//       default: { duration: 700 }
+//     }
+//   },
+//   closed: {
+//     y: 50,
+//     opacity: 0
+//   }
+// });
 
 class About extends React.Component {
 
@@ -160,35 +158,35 @@ class About extends React.Component {
   setText = num => {
       this.setState({ isEnter: false }, () => {
       setTimeout(() => {
-            if (num==1){
+            if (num===1){
               this.setState({ text: "A popular JS library that helps make simple component based UI's for applications."});
               this.setState({ header: "React"});
             }
-            else if (num==2){
+            else if (num===2){
               this.setState({ text: "Containerized applications are easy to run on different platforms and are memory light. (in development) "});
               this.setState({ header: "Docker"});
             }
-            else if (num==3){
+            else if (num===3){
               this.setState({ text: "Express provides a simple backend interface to make API calls and set up routes."});
               this.setState({ header: "Express"});
             }
-            else if (num==4){
+            else if (num===4){
               this.setState({ text: "A free cloud hosting business that helps me launch my website and keep it up."});
               this.setState({ header: "Heroku"});
             }
-            else if (num==5){
+            else if (num===5){
               this.setState({ text: "A free JS animation library that helps with cross page fluidity and interactivity on the page."});
               this.setState({ header: "Pose"});
             }
-            else if (num==6){
+            else if (num===6){
               this.setState({ text: "An industry standard JS runtime library that many applications today are built on."});
               this.setState({ header: "Node"});
             }
-            else if (num==7){
+            else if (num===7){
               this.setState({ text: "An add-on for the popular document based databse that introduces schemas. I use this to store my artwork"});
               this.setState({ header: "Mongoose"});
             }
-            else if (num==8){
+            else if (num===8){
               this.setState({ text: "A simple yet powerful responsive UI formatter to ensure a clean look on desktop and mobile views."});
               this.setState({ header: "Bootstrap"});
             }

@@ -149,6 +149,7 @@ background-color: var(--space-blue);
 height: calc(100vh - var(--navbar-height));
 width: 100vw;
 padding: calc(10px + 2vw);
+overflow: hidden;
 background-color: var(--white);
 }
 .aboutContent{
@@ -193,7 +194,6 @@ border-radius: 10px;
 outline: 20px var(--pale-pale-blue);
 outline-style: outset;
 outline-offset: calc(9vw + 9vh);
-outline-opacity: .5;
 z-index: -1;
 }
 .aboutText{
@@ -466,4 +466,10 @@ padding:5px;
 }
 .invalidAction{
   background-color: #eb583480;
+}
+
+.app{
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }

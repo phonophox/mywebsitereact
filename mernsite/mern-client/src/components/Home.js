@@ -1,13 +1,13 @@
-import React, { Component, Fragment} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-import Navbar from './Navbar.js'
 import posed, { PoseGroup } from 'react-pose';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import code1 from '../images/code1.png';
+import card1 from '../images/nodeLogo.png';
 import paint1 from '../images/paint1.jpg';
 
 
@@ -43,14 +43,6 @@ const Banner = posed.div({
     transition: {
     duration: 1000
     }
-  },
-  closed: {
-    opacity: 0
-  }
-});
-const BannerText = posed.p({
-  open: {
-    opacity: 1,
   },
   closed: {
     opacity: 0
@@ -108,7 +100,7 @@ class Home extends React.Component {
                               <header className="text-center cardHeader">About</header>
                             </div>
                             <div className="cardImg">
-                                <img src=""/>
+                                <img src={card1}/>
                             </div>
                             <div className="info">
                               <p className="text-center cardText">Information about the libraries and makings of this website.</p>

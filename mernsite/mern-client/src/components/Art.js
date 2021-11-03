@@ -41,7 +41,7 @@ class Art extends React.Component {
   componentDidMount() {
     axios({
         method:"get",
-        url: "http://mern-site.herokuapp.com/api/art",
+        url: process.env.NODE_ENV == "development" ? "http://localhost:8082/api/art": "http://mern-site.herokuapp.com/api/art",
 
 
     }).then(res => {

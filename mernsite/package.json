@@ -5,12 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "build": "cd mern-client && npm run build",
+    "watch": "npm nodemon mern-client",
     "app": "nodemon app.js",
-    "heroku-postbuild": "cd mern-client && npm install --only=dev && npm install && npm run build",
-    "webpack-dev": "webpack --env=dev --watch",
-    "webpack-live": "webpack --env=live",
-    "serve": "node ./src/bin/www",
-    "dev": "npm-run-all --parallel webpack-dev serve"
+    "heroku-postbuild": "cd mern-client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Isaac Nelson",
   "license": "ISC",

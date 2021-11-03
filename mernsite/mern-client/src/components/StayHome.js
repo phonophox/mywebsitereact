@@ -420,21 +420,19 @@ class StayHome extends Component {
   handleActionChange = (e, action, currentAvailablePopulation) => {
     var newState = Object.assign({}, this.state);
     var population = currentAvailablePopulation;
-
-    if(action === "gather"){
-      newState.currentAction.gather = e.target.value;
-    }
-    else if(action === "rest"){
-      newState.currentAction.rest = e.target.value;
-    }
-    else if(action === "birth"){
-      newState.currentAction.birth = e.target.value;
-    }
-    else if(action === "arms"){
-      newState.currentAction.arms.number = e.target.value;
-    }
-
     if(population > 0){
+      if(action === "gather"){
+        newState.currentAction.gather = e.target.value;
+      }
+      else if(action === "rest"){
+        newState.currentAction.rest = e.target.value;
+      }
+      else if(action === "birth"){
+        newState.currentAction.birth = e.target.value;
+      }
+      else if(action === "arms"){
+        newState.currentAction.arms.number = e.target.value;
+      }
       this.setState(newState);
     }
   }
